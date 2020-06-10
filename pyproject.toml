@@ -69,7 +69,7 @@ pdfminer = "20191125"
 "pdfminer.six" = {git = "https://github.com/pdfminer/pdfminer.six", rev = "33b60dfd5414bf91fa232550528973b07028ff64"}
 phonenumbers = "8.12.5"
 protobuf = "3.12.2"
-psutil = "4.3.1"
+psutil = "5.6.6"
 py-Asterisk = "0.5.18"
 pyasn1-modules = "0.2.8"
 pycryptodome = "3.9.7"
