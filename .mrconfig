@@ -1,0 +1,55 @@
+[account-analytic]
+checkout = git clone 'https://github.com/OCA/account-analytic.git' 'account-analytic' -b 12.0
+[account-financial-reporting]
+checkout = git clone 'https://github.com/OCA/account-financial-reporting' -b 12.0
+[account-financial-tools]
+checkout = git clone 'https://github.com/OCA/account-financial-tools.git' 'account-financial-tools' -b 12.0
+[account-payment]
+checkout = git clone 'https://github.com/CompassionCH/account-payment' -b 12.0
+[bank-payment]
+checkout = git clone 'https://github.com/CompassionCH/bank-payment.git' 'bank-payment' -b 12.0-sepa-non-sepa-orders
+[bank-statement-import]
+checkout = git clone 'https://github.com/CompassionCH/bank-statement-import.git' -b 12.0-camt-details
+[bank-statement-reconcile]
+checkout = git clone 'https://github.com/OCA/bank-statement-reconcile.git' 'bank-statement-reconcile' -b 12.0
+[compassion-accounting]
+checkout = git clone 'https://github.com/CompassionCH/compassion-accounting.git' -b 12.0
+[compassion-modules]
+checkout = git clone 'https://github.com/CompassionCH/compassion-modules.git' -b 12.0
+[compassion-switzerland]
+checkout = git clone 'https://github.com/CompassionCH/compassion-switzerland.git' -b 12.0
+[connector-telephony]
+checkout = git clone 'https://github.com/OCA/connector-telephony.git' 'connector-telephony' -b 12.0
+[crm]
+checkout = git clone 'https://github.com/OCA/crm.git' -b 12.0
+[geospatial]
+checkout = git clone 'https://github.com/CompassionCH/geospatial' -b 12.0-everything-migrated
+[hr]
+checkout = git clone 'https://github.com/OCA/hr.git' 'hr' -b 12.0
+[hr-timesheet]
+checkout = git clone 'https://github.com/OCA/hr-timesheet.git' 'hr-timesheet' -b 12.0
+[l10n-switzerland]
+checkout = git clone 'https://github.com/CompassionCH/l10n-switzerland.git' -b 12.0-everything-migrated
+[mis-builder]
+checkout = git clone 'https://github.com/OCA/mis-builder' -b 12.0
+[partner-contact]
+checkout = git clone 'https://github.com/CompassionCH/partner-contact.git' 'partner-contact' -b 12.0-smart-tag
+[queue]
+checkout = git clone 'https://github.com/OCA/queue.git' 'queue' -b 12.0
+[report-print-send]
+checkout = git clone 'https://github.com/CompassionCH/report-print-send.git' 'report-print-send' -b 12.0-everything-migrated
+[reporting-engine]
+checkout = git clone 'https://github.com/OCA/reporting-engine.git' -b 12.0
+[server-tools]
+checkout = git clone 'https://github.com/OCA/server-tools' -b 12.0
+[server-ux]
+checkout = git clone 'https://github.com/OCA/server-ux' -b 12.0
+[social]
+checkout = git clone 'https://github.com/CompassionCH/social' -b 12.0-sendgrid-all
+[web]
+checkout = git clone 'https://github.com/OCA/web.git' 'web' -b 12.0
+[website]
+checkout = git clone 'https://github.com/CompassionCH/website.git' 'website' -b 12.0
+[website-cms]
+checkout = git clone 'https://github.com/CompassionCH/website-cms' -b 12.0
+
