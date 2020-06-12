@@ -6,11 +6,14 @@
 2. From the cloned repo:
 
 ```
-chmod 755 ./install.sh
 ./install.sh
 ```
 
 3. Create odoo.conf in the /odoo directory (ask someone for the configs)
+
+### Notes
+- You may need to give chmod 755 right to install.sh to execute it
+- If the script installs pyenv for you, it will stop and you will have to update the PATH of your shell, then relaunch the script.
 
 ## Usage
 
@@ -38,7 +41,7 @@ Parameters: -c /home/sylvain/compassion/12.0/odoo/odoo.conf
 
 ## Add test database
 
-Get backup from /web/database/selector ad pg_dump then (`test` is a db name example):
+Get a backup from the devel at /web/database/selector as pg_dump then (`test` is a db name example):
 
 ```
 createdb test

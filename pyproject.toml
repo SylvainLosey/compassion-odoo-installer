@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "magic_odoo"
+name = "compassion-odoo"
 version = "0.1.0"
 description = ""
 authors = ["Sylvain <sylvainlosey@gmail.com>"]
@@ -117,6 +117,7 @@ urllib3 = "1.24.3"
 psycopg2-binary = "^2.8.5"
 pycups = "^2.0.1"
 python-ldap = "^3.2.0"
+Werkzeug = "0.14.1"
 
 [tool.poetry.dev-dependencies]
 
