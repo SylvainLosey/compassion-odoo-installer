@@ -10,12 +10,26 @@ INSTALL_PATH=${INSTALL_PATH:-"/home/${USER}/compassion"}
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 GREEN='\033[0;32m'
+RED='\033[0;31m'
 NC='\033[0m'
 
 
 #-- DEPENDENCIES --#
 
+if ! [ -x "$(command -v pyenv)" ]; then
+    echo -e "${RED}Please install Pyenv, make sure it works and relaunch this script${NC}"
+    echo -e "Installation link: https://github.com/pyenv/pyenv-installer"
+    exit 1
+fi
+
+if ! [ -x "$(command -v poetry)" ]; then
+    echo -e "${RED}Please install Poetry, make sure it works and relaunch this script${NC}"
+    echo -e "Installation link: https://github.com/python-poetry/poetry"
+    exit 1
+fi
+
 echo -e "${GREEN}Installing linux dependencies ...${NC}"
+mkdir -p "${INSTALL_PATH}/${ODOO_VERSION}" && cd "${INSTALL_PATH}/${ODOO_VERSION}"
 sudo apt update
 sudo apt install myrepos postgresql-10 postgresql-10-postgis-2.4 libcups2-dev python-dev libxml2 \
 libxml2-dev libxslt1-dev libevent-dev libsasl2-dev libldap2-dev expect python-lxml python-simplejson \
@@ -24,30 +38,10 @@ python-serial python-yaml python-cups python-mysqldb zbar-tools node-less
 # Create postgres user
 sudo su - postgres -c "createuser -s $USER"
 
-# Install poetry and pipenv if they aren't
-if ! [ -x "$(command -v pyenv)" ]; then
-    echo -e  "${GREEN}Installing pyenv ...${NC}"
-    echo -e  "${GREEN}The script will stop and you will have to update you shell's PATH${NC}"
-
-    sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
-    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-    xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
-    curl https://pyenv.run | bash
-    exec $SHELL
-fi
-
-if ! [ -x "$(command -v poetry)" ]; then
-    echo -e  "${GREEN}Installing poetry ...${NC}"
-    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-    export PATH="$HOME/.poetry/bin:$PATH"
-    source $HOME/.poetry/env
-fi
-
 
 #-- ENVIRONMENT --#
 
 echo -e  "${GREEN}Setup python version ...${NC}"
-mkdir "${INSTALL_PATH}/${ODOO_VERSION}" && cd "${INSTALL_PATH}/${ODOO_VERSION}"
 pyenv install $PYTHON_VERSION
 pyenv local $PYTHON_VERSION
 

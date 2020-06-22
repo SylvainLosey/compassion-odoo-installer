@@ -1,5 +1,11 @@
 # Compassion Odoo Installer
 
+## Prerequisites
+
+- Ubuntu
+- [Pyenv](https://github.com/pyenv/pyenv-installer)
+- [Poetry](https://github.com/python-poetry/poetry)
+
 ## How to
 
 1. Clone this repo somewhere
