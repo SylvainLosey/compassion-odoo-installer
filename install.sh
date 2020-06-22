@@ -33,7 +33,7 @@ mkdir -p "${INSTALL_PATH}/${ODOO_VERSION}" && cd "${INSTALL_PATH}/${ODOO_VERSION
 sudo apt update
 sudo apt install myrepos postgresql-10 postgresql-10-postgis-2.4 libcups2-dev python-dev libxml2 \
 libxml2-dev libxslt1-dev libevent-dev libsasl2-dev libldap2-dev expect python-lxml python-simplejson \
-python-serial python-yaml python-cups python-mysqldb zbar-tools node-less
+python-serial python-yaml python-cups python3-mysqldb zbar-tools node-less
 
 # Create postgres user
 sudo su - postgres -c "createuser -s $USER"
