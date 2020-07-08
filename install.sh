@@ -30,8 +30,13 @@ fi
 
 echo -e "${GREEN}Installing linux dependencies ...${NC}"
 mkdir -p "${INSTALL_PATH}/${ODOO_VERSION}" && cd "${INSTALL_PATH}/${ODOO_VERSION}"
+
+# Postgres12 APT repository
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+
 sudo apt update
-sudo apt install myrepos postgresql-10 postgresql-10-postgis-2.4 libcups2-dev python-dev libxml2 \
+sudo apt install myrepos postgresql-12 postgresql-client-12  postgis postgresql-12-postgis-3 libcups2-dev python-dev libxml2 \
 libxml2-dev libxslt1-dev libevent-dev libsasl2-dev libldap2-dev expect python-lxml python-simplejson \
 python-serial python-yaml python-cups python3-mysqldb zbar-tools node-less
 
