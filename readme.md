@@ -8,20 +8,30 @@
 
 ## How to
 
-1. Clone this repo somewhere
-2. From the cloned repo:
+1. Make sure pyenv and poetry are installed
+2. Clone this repo somewhere
+3. From the cloned repo:
 
 ```
 ./install.sh
 ```
 
-3. Create odoo.conf in the /odoo directory (ask someone for the configs)
-
-### Notes
-- You may need to give chmod 755 right to install.sh to execute it
-- If the script installs pyenv for you, it will stop and you will have to update the PATH of your shell, then relaunch the script.
+4. Create odoo.conf in the /odoo directory (ask someone for the configs)
 
 ## Usage
+
+### Pycharm
+
+- Open the folder where Odoo was installed (`/12.0`) as a new project
+- Install the poetry pycharm plugin: https://plugins.jetbrains.com/plugin/14307-poetry (official support is being implemented)
+- Restart and go in File > Settings > Project > Python Interpreter > Wheel Icon > Add > Poetry Environment
+- Select "Existing environment", should have /pypoetry/virtualenv in the path, apply.
+- At the top right click on "Add configuration", then plus icon, then Python with: (update with your paths)
+
+```
+Script path: /home/sylvain/compassion/12.0/odoo/odoo-bin
+Parameters: -c /home/sylvain/compassion/12.0/odoo/odoo.conf
+```
 
 ### Terminal
 
@@ -30,19 +40,6 @@ Once succesfully installed, from where you chose to install:
 ```
 poetry shell
 ./odoo/odoo-bin
-```
-
-### Pycharm
-
-- Open the folder where Odoo was installed as new project
-- Install the poetry pycharm plugin: https://plugins.jetbrains.com/plugin/14307-poetry (official support is being implemented)
-- Restart and go in File > Settings > Project > Python Interpreter > Wheel Icon > Add > Poetry Environment
-- Select "Existing environment", should have /pypoetry/virtualenv in the path, apply.
-- At the top right click on "Add configuration", then plus icon, with: (update with your paths)
-
-```
-Script path: /home/sylvain/compassion/12.0/odoo/odoo-bin
-Parameters: -c /home/sylvain/compassion/12.0/odoo/odoo.conf
 ```
 
 ## Add test database
