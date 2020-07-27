@@ -22,6 +22,8 @@ checkout = git clone 'https://github.com/CompassionCH/compassion-switzerland.git
 checkout = git clone 'https://github.com/OCA/connector-telephony.git' 'connector-telephony' -b 12.0
 [crm]
 checkout = git clone 'https://github.com/OCA/crm.git' -b 12.0
+[currency]
+checkout = git clone 'https://github.com/OCA/currency.git' -b 12.0
 [geospatial]
 checkout = git clone 'https://github.com/CompassionCH/geospatial' -b 12.0-everything-migrated
 [hr]
